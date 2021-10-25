@@ -5,7 +5,7 @@ from django.views import generic
 from django.urls import reverse
 from django.utils.safestring import mark_safe
 import calendar
-from django.views.generic import DeleteView
+# from django.views.generic import DeleteView
 from .models import *
 from .utils import Calendar
 from .forms import EventForm
@@ -68,7 +68,7 @@ def event(request, event_id=None):
     return render(request, 'cal/event.html', {'form': form})
 
 
-class DeleteEventView(DeleteView):
-    model = Event
-    template_name = 'cal/event.html'
-    success_url = reverse_lazy('calendar')
+# class DeleteEventView(DeleteView):
+#     model = Event
+#     template_name = 'cal/event.html'
+#     success_url = reverse_lazy('calendar')
